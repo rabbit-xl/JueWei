@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>觉唯设计_用户体验设计分享平台</title>
+		<link rel="stylesheet" type="text/css" href="../css/juewei.css" />
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+		<!-- <link rel="shortcut icon" href="../img/juewei/jiawin.jpg" type="image/x-icon" /> -->
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script src="../js/vue.min.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="head" id="head">
+				<div class="content">
+					<div class="logo">
+						<h1>觉唯设计</h1>
+					</div>
+					<ul class="nav" >
+						<li v-for="item in items"><a :href="item.url">{{ item.content }}</a></li>
+					</ul>
+					<div class="right">
+						<i class="fa fa-search search_icon"></i>
+						<a :href="loginUrl">登录</a>
+						<a :href="zhuceUrl">注册</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="main" id="main">
+				<div class="life">
+					<h1>{{ life.h1 }}</h1>
+					<p>{{ life.p }}</p>
+				</div>
+				<div class="notice">
+					<div class="notice_content">
+						<ul>
+							<i class="fa fa-bullhorn bullhorn_icon"></i>
+							<li v-for="item in notice"><a :href="item.url">{{ item.content }}</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="anim">
+					<div class="anim_content">
+						<div class="wrapper">
+							<ul class="wrapper_list">
+								<li v-for="item in wrapper" ><img :src="item.imgUrl"></li>
+							</ul>
+							<ul class="dots">
+								<li class="dot current_dot"></li>
+								<li class="dot"></li>
+								<li class="dot"></li>
+								<li class="dot"></li>
+								<li class="dot"></li>
+							</ul>
+							<div class="wrapper_btn">
+								<div><i class="fa fa-chevron-left"></i></div>
+								<div><i class="fa fa-chevron-right"></i></div>
+							</div>
+						</div>
+						<img src="https://tpc.googlesyndication.com/daca_images/simgad/3155750586452285779">
+						<img src="https://tpc.googlesyndication.com/daca_images/simgad/3155750586452285779">
+					</div>
+				</div>
+				<div class="product">
+					<div class="product_content">
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="切克闹煎饼果子广告"></div>
+								<img class="moveim" src="../img/juewei/11071044eeef637f6a2647e.jpg" title="切克闹煎饼果子广告">
+							</div>
+							<div class="description">
+								<a href="#" >切克闹煎饼果子广告</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="JIMUU中秋浮光礼盒"></div>
+								<img src="../img/juewei/1100101330b9af5da54b3dc.jpg" title="JIMUU中秋浮光礼盒">
+							</div>
+							
+							<div class="description">
+								<a href="#" >JIMUU中秋浮光礼盒</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="SHISEIDO资生堂白珍珠少女唐嫣"></div>
+								<img src="../img/juewei/1100101208c3bbe2bc131fa.jpg" title="SHISEIDO资生堂白珍珠少女唐嫣">
+							</div>
+							
+							<div class="description">
+								<a href="#" >SHISEIDO资生堂白珍珠少女唐嫣</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="绅贵男装"></div>
+								<img src="../img/juewei/11001003ce300497813b950.jpg" title="绅贵男装">
+							</div>
+							
+							<div class="description">
+								<a href="#" >绅贵男装</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="七夕遇见你"></div>
+								<img src="../img/juewei/11000957f3878084e510416.jpg" title="七夕遇见你">
+							</div>
+							
+							<div class="description">
+								<a href="#" >七夕遇见你</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="2020新款路虎卫士宣传片征服哈萨克斯坦全地形"></div>
+								<img src="../img/juewei/110009418335419ff5d13f6.jpg" title="2020新款路虎卫士宣传片征服哈萨克斯坦全地形">
+							</div>
+							
+							<div class="description">
+								<a href="#" >2020新款路虎卫士宣传片征服哈萨克斯坦全地形</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="腾讯体育世界杯之李毅大帝蚌埠回旋踢"></div>
+								<img src="../img/juewei/110009351726f98a2417058.jpg" title="腾讯体育世界杯之李毅大帝蚌埠回旋踢">
+							</div>
+							
+							<div class="description">
+								<a href="#" >腾讯体育世界杯之李毅大帝蚌埠回旋踢</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="美美的吃完大闸蟹"></div>
+								<img src="../img/juewei/11000932700e440d8ab0d56.jpg" title="美美的吃完大闸蟹">
+							</div>
+							
+							<div class="description">
+								<a href="#" >美美的吃完大闸蟹</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="牡丹亭游园惊梦"></div>
+								<img src="../img/juewei/110009213b65d13e0076b14.jpg" title="牡丹亭游园惊梦">
+							</div>
+							
+							<div class="description">
+								<a href="#" >牡丹亭游园惊梦</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="辉瑞】2020校招-勇气篇"></div>
+								<img src="../img/juewei/1100060186968c52ff10c0e.jpg" title="【辉瑞】2020校招-勇气篇">
+							</div>
+							
+							<div class="description">
+								<a href="#" >【辉瑞】2020校招-勇气篇</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="方寸之间，智慧于心如幻智能"></div>
+								<img src="../img/juewei/110003373ad5ff26780c75a.jpg" title="方寸之间，智慧于心如幻智能">
+							</div>
+							
+							<div class="description">
+								<a href="#" >方寸之间，智慧于心如幻智能</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="product_item">
+							<div class="producct_item_head">
+								<div><i class="fa fa-bookmark"></i><a href="#">平面设计</a></div>
+								<div><span>10</span><i class="fa fa-fire"></i></div>
+							</div>
+							<div class="product_img">
+								<div title="马思纯纪录片《穿越北疆》"></div>
+								<img src="../img/juewei/110003318a72f096fd3f108.jpg" title="马思纯纪录片《穿越北疆》">
+							</div>
+							
+							<div class="description">
+								<a href="#" >马思纯纪录片《穿越北疆》</a>
+							</div>
+							<div class="data">
+								<span>5天前</span>
+								<div>
+									<span class="fx"><i class="fa fa-heart "></i>0</span>
+									<span class="fx"><i class="fa fa-comment "></i>0</span>
+								</div>
+							</div>
+						</div>
+						<div class="page">
+							<span class="current btn">1</span>
+							<span class="btn">2</span>
+							<span class="dd">...</span>
+							<span class="btn">149</span>
+							<a href="#" class="btn"><i class="fa fa-chevron-right"></i></a>
+							<span class="count">共149页</span>
+							<span class="tz">
+								<input type="text" value="1" />
+								<a href="#" class="btn go">Go</a>
+							</span>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="love">
+					<div class="love_content">
+						<div class="love_item">
+							<div class="love_display" title="packaging_design_logotype_luxury_brand 包装设计">
+								<i class="fa fa-link fd"></i>
+							</div >
+							<div class="design">
+								<p>packaging_design_logotype_luxury_brand 包装设计</p>
+								<span class="time">两周前</span>
+								<div>
+									<i class="fa fa-heart-o"></i>0
+									<i class="fa fa-eye"></i>68
+									<i class="fa fa-comment-o"></i>
+								</div>
+							</div>
+							<img src="../img/juewei/29075259938f6beed9a4a7f.jpg">
+							</div>
+						<div class="love_item">
+							<div class="love_display" title="packaging_design_logotype_luxury_brand 包装设计">
+								<i class="fa fa-link "></i>
+							</div >
+							<div class="design">
+								<p>packaging_design_logotype_luxury_brand 包装设计</p>
+								<span class="time">两周前</span>
+								<div>
+									<i class="fa fa-heart-o"></i>0
+									<i class="fa fa-eye"></i>68
+									<i class="fa fa-comment-o"></i>
+								</div>
+							</div>
+							<img src="../img/juewei/29075126182b0a3a432e271.jpg"></div>
+						<div class="love_item">
+							<div class="love_display" title="packaging_design_logotype_luxury_brand 包装设计">
+								<i class="fa fa-link "></i>
+							</div >
+							<div class="design">
+								<p>packaging_design_logotype_luxury_brand 包装设计</p>
+								<span class="time">两周前</span>
+								<div>
+									<i class="fa fa-heart-o"></i>0
+									<i class="fa fa-eye"></i>68
+									<i class="fa fa-comment-o"></i>
+								</div>
+							</div>
+							<img src="../img/juewei/29074705d96a8590c9725b2.gif"></div>
+						<div class="love_item">
+							<div class="love_display" title="packaging_design_logotype_luxury_brand 包装设计">
+								<i class="fa fa-link "></i>
+							</div >
+							<div class="design">
+								<p>packaging_design_logotype_luxury_brand 包装设计</p>
+								<span class="time">两周前</span>
+								<div>
+									<i class="fa fa-heart-o"></i>0
+									<i class="fa fa-eye"></i>68
+									<i class="fa fa-comment-o"></i>
+								</div>
+							</div>
+							<img src="../img/juewei/2615231746c4f3f7360db85.jpeg"></div>
+						<div class="love_item">
+							<div class="love_display" title="packaging_design_logotype_luxury_brand 包装设计">
+								<i class="fa fa-link "></i>
+							</div >
+							<div class="design">
+								<p>packaging_design_logotype_luxury_brand 包装设计</p>
+								<span class="time">两周前</span>
+								<div>
+									<i class="fa fa-heart-o"></i>0
+									<i class="fa fa-eye"></i>68
+									<i class="fa fa-comment-o"></i>
+								</div>
+							</div>
+							<img src="../img/juewei/261521598e7fffa682bf2c8.jpeg"></div>
+						<div class="love_item">
+							<div class="love_display" title="packaging_design_logotype_luxury_brand 包装设计">
+								<i class="fa fa-link "></i>
+							</div >
+							<div class="design">
+								<p>packaging_design_logotype_luxury_brand 包装设计</p>
+								<span class="time">两周前</span>
+								<div>
+									<i class="fa fa-heart-o"></i>0
+									<i class="fa fa-eye"></i>68
+									<i class="fa fa-comment-o"></i>
+								</div>
+							</div>
+							<img src="../img/juewei/160939141c24582eeb9a08b.jpeg"></div>
+						<div class="love_item">
+							<div class="love_display" title="packaging_design_logotype_luxury_brand 包装设计">
+								<i class="fa fa-link "></i>
+							</div >
+							<div class="design">
+								<p>packaging_design_logotype_luxury_brand 包装设计</p>
+								<span class="time">两周前</span>
+								<div>
+									<i class="fa fa-heart-o"></i>0
+									<i class="fa fa-eye"></i>68
+									<i class="fa fa-comment-o"></i>
+								</div>
+							</div>
+							<img src="../img/juewei/09074439e992eaff312c28c.jpg"></div>
+						<div class="love_item">
+							<div class="love_display" title="packaging_design_logotype_luxury_brand 包装设计">
+								<i class="fa fa-link "></i>
+							</div >
+							<div class="design">
+								<p>packaging_design_logotype_luxury_brand 包装设计</p>
+								<span class="time">两周前</span>
+								<div>
+									<i class="fa fa-heart-o"></i>0
+									<i class="fa fa-eye"></i>68
+									<i class="fa fa-comment-o"></i>
+								</div>
+							</div>
+							<img src="../img/juewei/09074133c54957922039dbc.jpg"></div>
+						<div class="enjoy">
+							<a href="#">取悦于灵感-Love Inspiration&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+						</div>
+					</div>
+
+				</div>
+				<div class="user">
+					<div class="user_content">
+						<div class="user_item">
+							<div class="user_icon">
+								<p><i class="fa fa-search"></i></p>
+							</div>
+							<h2>搜索发现</h2>
+							<h3>探索创造性的思维，发现引领最新的设计潮流</h3>
+						</div>
+						<div class="user_item">
+							<div class="user_icon">
+								<p><i class="fa fa-user"></i></p>
+							</div>
+							<h2>用户设计</h2>
+							<h3>以用户为中心，以体验为至上，以细节为成败</h3>
+						</div>
+						<div class="user_item">
+							<div class="user_icon">
+								<p><i class="fa fa-paper-plane-o"></i></p>
+							</div>
+							<h2>情感传递</h2>
+							<h3>不只是图文信息，更多的是喜怒哀乐的情感</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="activity">
+					<img src="../img/juewei/1015044357fcddfbb3540a6.jpg">
+					<img src="../img/juewei/10150311fe2104fef62de3b.jpg">
+					<img src="../img/juewei/10153729991d6614823c7b2.jpg">
+					<img src="../img/juewei/101541394aa258d790eb1d0.jpg">
+				</div>
+
+			</div>
+			<div class="foot">
+				<div class="foot_content">
+					<div class="foot_main">
+						<div class="foot_main_left">
+							<h3 class="h3_title">觉唯</h3>
+							<p>
+								以用户为中心的设计理念，专注于用户体验设计，拥有国内外最新的设计潮流趋势
+								、独特而美的创意视觉、新颖而灵敏的思维意识、极致而生动的交互体验，更有严谨而
+								通俗的技术教程！
+							</p>
+							<p>
+								唯然是觉唯网的图片分享社区，以记录美丽、分享美好的创意理念，分享高品质创意、艺术、
+								设计、时尚、插画、摄影、唯美类精美图片。
+							</p>
+						</div>
+						<div class="foot_center_group">
+							<h3 class="h3_title">关于</h3>
+							<ul>
+								<li><a href="#">关于觉唯</a></li>
+								<li><a href="#">留言联系</a></li>
+								<li><a href="#">友情链接</a></li>
+								<li><a href="#">免责声明</a></li>
+								<li><a href="#">网站地图</a></li>
+							</ul>
+						</div>
+						<div class="foot_center_group">
+							<h3 class="h3_title">栏目</h3>
+							<ul>
+								<li><a href="#">用户体验</a></li>
+								<li><a href="#">素材下载</a></li>
+								<li><a href="#">设计欣赏</a></li>
+								<li><a href="#">主题商店</a></li>
+								<li><a href="#">唯然灵感</a></li>
+							</ul>
+						</div>
+						<div class="foot_center_group">
+							<h3 class="h3_title">友链</h3>
+							<ul>
+								<li><a href="#">前端观察</a></li>
+								<li><a href="#">设计达人</a></li>
+								<li><a href="#">DEEP OCEAN</a></li>
+							</ul>
+						</div>
+						<div class="guanzhu">
+							<h3 class="h3_title">关注</h3>
+							<p>Email:<a href="#">&nbsp;javin@jiawin.com</a></p>
+							<form>
+								<div class="email">
+									<input type="text" placeholder="请输入你的邮箱">
+									<input class="sub" type="submit" value="订阅" />
+								</div>
+							</form>
+							<div class="tb">
+								<a href="#" class="green"><i class="fa fa-weibo"></i></a>
+								<a href="#" class="tomato"><i class="fa fa-tencent-weibo"></i></a>
+								<a href="#" class="zs"><i class="fa fa-qq"></i></a>
+								<a href="#" class="blue"><i class="fa fa-rss"></i></a>
+								<a href="#" class="yellow"><i class="fa fa-weixin"></i></a>
+							</div>
+						</div>
+					</div>
+				     <div class="copyRight">
+						 <p>Copyright© 2012-2019
+						 <a href="#">觉唯设计</a>Theme by 
+						 <a href="#">Javin zhong </a>
+						 All All Rights Reserved.粤ICP备12073831号-1</p>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/juewei.js"></script>
+</html>
